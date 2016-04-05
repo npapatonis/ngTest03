@@ -2,29 +2,30 @@
     <form name="tourSummaryFilter" class="" novalidate>
         <div class="l-section">
 
-            <h2 class="primary-headline">STATICUITEXT.TOURSUMMARY</h2>
+            <h2 class="primary-headline">{{STATICUITEXT.TOURSUMMARY}}</h2>
 
-            <div class="notification notification--alert" role="alert" ng-show="tourSummaryFilter.$invalid">
+            <div class="notification notification--alert" role="alert" ng-show="tourSummaryFilter.$invalid && tourSummaryFilter.$submitted">
                 <div ng-messages="tourSummaryFilter.fromDate.$error">
-                    <div ng-message="required">STATICUITEXT.FROMDATEREQUIRED</div>
-                    <div ng-message="date">STATICUITEXT.FROMDATEINVALID</div>
+                    <div ng-message="required">{{STATICUITEXT.FROMDATEREQUIRED}}</div>
+                    <div ng-message="date">{{STATICUITEXT.FROMDATEINVALID}}</div>
                 </div>
                 <div ng-messages="tourSummaryFilter.toDate.$error">
-                    <div ng-message="required">STATICUITEXT.TODATEREQUIRED</div>
-                    <div ng-message="date">STATICUITEXT.TODATEINVALID</div>
-                    <div ng-message="validdaterange">STATICUITEXT.DATERANGEINVALID</div>
+                    <div ng-message="required">{{STATICUITEXT.TODATEREQUIRED}}</div>
+                    <div ng-message="date">{{STATICUITEXT.TODATEINVALID}}</div>
+                    <div ng-message="validdaterange">{{STATICUITEXT.DATERANGEINVALID}}</div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-4">
-                    <label for="fromDate">STATICUITEXT.FROMDATE*</label>
+                    <label for="fromDate">{{STATICUITEXT.FROMDATE}}*</label>
                     <div class="input-group tks-datepicker">
                         <input type="text"
                                name="fromDate"
                                class="form-control"
                                uib-datepicker-popup="{{dateFormat}}"
                                ng-model="filter.fromDateTime"
+                               ng-change="fromDatePopup.Change()"
                                is-open="fromDatePopup.isOpen"
                                datepicker-options="dateOptions"
                                alt-input-formats="altInputFormats"
@@ -37,13 +38,14 @@
                 </div>
                 <div class="col-1">&nbsp;</div>
                 <div class="col-4">
-                    <label for="toDate">STATICUITEXT.TODATE*</label>
+                    <label for="toDate">{{STATICUITEXT.TODATE}}*</label>
                     <div class="input-group tks-datepicker">
                         <input type="text"
                                name="toDate"
                                class="form-control"
                                uib-datepicker-popup="{{dateFormat}}"
                                ng-model="filter.toDateTime"
+                               ng-change="toDatePopup.Change()"
                                is-open="toDatePopup.isOpen"
                                datepicker-options="dateOptions"
                                alt-input-formats="altInputFormats"
@@ -57,11 +59,11 @@
 
             <div class="row">
                 <div class="col-4 tks-timepicker">
-                    <uib-timepicker name="fromTime" ng-model="filter.fromDateTime" show-meridian="false" />
+                    <uib-timepicker name="fromTime" ng-model="filter.fromDateTime" ng-change="fromDatePopup.Change()" show-meridian="false" />
                 </div>
                 <div class="col-1">&nbsp;</div>
                 <div class="col-4 tks-timepicker">
-                    <uib-timepicker name="toTime" ng-model="filter.toDateTime" show-meridian="false" />
+                    <uib-timepicker name="toTime" ng-model="filter.toDateTime" ng-change="toDatePopup.Change()" show-meridian="false" />
                 </div>
             </div>
 
@@ -70,40 +72,40 @@
             <div class="row">
                 <div class="col-4">
                     <label>
-                        <input type="checkbox" ng-model="filter.includeInProgress">&nbsp;STATICUITEXT.INCLUDEINPROGRESS
+                        <input type="checkbox" ng-model="filter.includeInProgress">&nbsp;{{STATICUITEXT.INCLUDEINPROGRESS}}
                     </label>
                 </div>
                 <div class="col-1">&nbsp;</div>
                 <div class="col-4">
                     <label>
-                        <input type="checkbox" ng-model="filter.mustStartInRange">&nbsp;STATICUITEXT.TOURMUSTSTARTINRANGE
+                        <input type="checkbox" ng-model="filter.mustStartInRange">&nbsp;{{STATICUITEXT.TOURMUSTSTARTINRANGE}}
                     </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-4">
                     <label>
-                        <input type="checkbox" ng-model="filter.includePartiallyCompleted">&nbsp;STATICUITEXT.INCLUDEPARTIALLYCOMPLETED
+                        <input type="checkbox" ng-model="filter.includePartiallyCompleted">&nbsp;{{STATICUITEXT.INCLUDEPARTIALLYCOMPLETED}}
                     </label>
                 </div>
                 <div class="col-1">&nbsp;</div>
                 <div class="col-4">
                     <label>
-                        <input type="checkbox" ng-model="filter.mustEndInRange">&nbsp;STATICUITEXT.TOURMUSTENDINRANGE
+                        <input type="checkbox" ng-model="filter.mustEndInRange">&nbsp;{{STATICUITEXT.TOURMUSTENDINRANGE}}
                     </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-4">
                     <label>
-                        <input type="checkbox" ng-model="filter.includeEndedByAdmin">&nbsp;STATICUITEXT.INCLUDEENDEDBYADMIN
+                        <input type="checkbox" ng-model="filter.includeEndedByAdmin">&nbsp;{{STATICUITEXT.INCLUDEENDEDBYADMIN}}
                     </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-4">
                     <label>
-                        <input type="checkbox" ng-model="filter.includeCancelled">&nbsp;STATICUITEXT.INCLUDECANCELLED
+                        <input type="checkbox" ng-model="filter.includeCancelled">&nbsp;{{STATICUITEXT.INCLUDECANCELLED}}
                     </label>
                 </div>
             </div>
@@ -112,7 +114,7 @@
 
             <div class="row">
                 <div class="col-4">
-                    <button type="submit" class="button mrm" ng-click="continue()">STATICUITEXT.CONTINUE</button>
+                    <button type="submit" class="button mrm" ng-click="continue()">{{STATICUITEXT.CONTINUE}}</button>
                 </div>
             </div>
         </div>

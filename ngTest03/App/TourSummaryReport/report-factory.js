@@ -3,9 +3,9 @@
 
     angular
         .module('ui.bootstrap.demo')
-        .factory('reportFactory', reportFactory);
+        .factory('reportFactory', reportFactory, ['dateFactory']);
 
-    function reportFactory() {
+    function reportFactory(dateFactory) {
 
         var service = {
             initializeTourSummaryFilter: initializeTourSummaryFilter
@@ -25,8 +25,8 @@
 
             var filter = {};
 
-            filter.toDateTime = toDateTime || getDatePart(new Date());
-            filter.fromDateTime = fromDateTime || addDays(filter.toDateTime, -1);
+            filter.toDateTime = toDateTime || dateFactory.getDatePart(new Date());
+            filter.fromDateTime = fromDateTime || dateFactory.addDays(filter.toDateTime, -1);
 
             filter.mustStartInRange = mustStartInRange || false;
             filter.mustEndInRange = mustEndInRange || false;

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Common\common.js" />
+    <Content Include="App\Common\date-factory.js" />
     <Content Include="App\Common\report-filter.js" />
     <Content Include="App\DateRange\daterange.html" />
     <Content Include="App\DateRange\daterange.js" />
