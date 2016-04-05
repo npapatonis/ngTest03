@@ -1,0 +1,82 @@
+﻿/*Mode picker (month, day)*/
+.tks-datepicker th button {
+    background-color: #4A90E2;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    color: white;
+}
+
+    .tks-datepicker th button:hover {
+        color: white;
+        background-color: #00549F;
+    }
+
+    .tks-datepicker th button:disabled:hover {
+        color: white;
+        background-color: #4A90E2;
+    }
+
+/*All calendar dates*/
+.tks-datepicker td button {
+    border: 0;
+}
+
+/*Selected date*/
+.tks-datepicker td .active {
+    background-color: #00549F;
+}
+
+    /*Selected date text*/
+    .tks-datepicker td .active span {
+        color: white;
+    }
+
+/*Footer buttons*/
+.tks-datepicker .btn-group {
+    width: 100%;
+}
+
+    /*Today button*/
+    .tks-datepicker .btn-group button:first-child {
+        background-color: #4A90E2;
+        width: 100%;
+        border-radius: 3px;
+    }
+
+        .tks-datepicker .btn-group button:first-child:hover {
+            background-color: #00549F;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+    /*Clear button*/
+    .tks-datepicker .btn-group button:last-child {
+        display: none;
+    }
+
+/*Close button*/
+.tks-datepicker .btn-success {
+    display: none;
+}
+
+/*Input group*/
+/*.tks-datepicker .input-group-btn button {
+    margin-top: 5px;
+}*/
+
+@media print {
+    .no-print {
+       display: none;
+    }
+}
+
+/*
+    brand blue - #4A90E2
+    brand blue dark - #00549F
+    brand blue dark pressed - #003399
+    brand yellow - #FECC5C
+*/

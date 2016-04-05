@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Content/tks-bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Content/ui-bootstrap-csp.css" rel="stylesheet" type="text/css" />
+    <link href="Content/styles.css" rel="stylesheet" title="di" type="text/css" />
+    <link href="Content/styles-extended.css" rel="stylesheet" title="di" type="text/css" />
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="Scripts/angular-messages.js"></script>
+    <script src="Scripts/datetime-picker.js"></script>
+    <script src="App/app.js"></script>
+    <script src="App/Common/common.js"></script>
+    <script src="App/Common/report-filter.js"></script>
+    <script src="App/Directives/dategreaterthan.js"></script>
+    <script src="App/Directives/datelessthan.js"></script>
+    <script src="App//Buttons/buttons.js"></script>
+    <script src="App/DatePicker/datepicker.js"></script>
+    <script src="App/DateTimePicker/DateTimePicker.js"></script>
+    <script src="App/CollapsingHeader/collapsingheader.js"></script>
+    <script src="App/DateRange/daterange.js"></script>
+    <script src="App/TourSummaryReport/report-factory.js"></script>
+    <script src="App/TourSummaryReport/toursummaryfilter.js"></script>
+    <script src="App/TourSummaryReport/toursummaryreport.js"></script>
+
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+    </style>
+
+</head>
+<body ng-app="ui.bootstrap.demo">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">UI Bootstrap</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown" uib-dropdown>
+                <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+                    Work Areas<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="buttons">Buttons</a></li>
+                    <li><a ui-sref="datePicker">DatePicker</a></li>
+                    <li><a ui-sref="dateTimePicker">DateTimePicker</a></li>
+                    <li><a ui-sref="collapsingHeader">Collapsing Header</a></li>
+                    <li><a ui-sref="dateRange">Date Range</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" uib-dropdown>
+                <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+                    Reports<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="tourSummaryFilter">Tour Summary</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+</body>
+</html>

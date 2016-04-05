@@ -1,0 +1,39 @@
+﻿<div ng-controller="CollapsingHeaderCtrl">
+    <h4>Collapsing Header</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>
+                    <div uib-collapse="!filters.visible">
+                        <div class="well well-sm">
+                            <p class="input-group">
+                                <input type="text" class="form-control" uib-datepicker-popup="{{filters.dateFormat}}" ng-model="filters.startDate.from.date" is-open="filters.startDate.from.isOpen" datepicker-options="filters.dateOptions" ng-required="true" close-text="Close" alt-input-formats="filters.altInputFormats" />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" ng-click="filters.startDate.from.Open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    Start Date
+                    <!--<span class="btn btn-xs btn-hover btn-default glyphicon glyphicon-filter" ng-click="filters.visible = !filters.visible"></span>-->
+                    <span class="btn btn-xs btn-hover glyphicon glyphicon-filter" ng-click="filters.visible = !filters.visible"></span>
+                    <!--<button type="button" class="glyphicon glyphicon-filter" ng-click="filters.visible = !filters.visible" aria-label="Filter" aria-hidden="true" />-->
+                </th>
+                <th>End Date</th>
+                <th>Officer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tourInstance in tourInstances">
+                <td>{{ tourInstance.name }}</td>
+                <td>{{ tourInstance.status }}</td>
+                <td>{{ tourInstance.startDate }}</td>
+                <td>{{ tourInstance.endDate }}</td>
+                <td>{{ tourInstance.officer }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
