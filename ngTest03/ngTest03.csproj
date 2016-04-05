@@ -75,6 +75,8 @@
     <Content Include="App\DateTimePicker\DateTimePicker.js" />
     <Content Include="App\Directives\dategreaterthan.js" />
     <Content Include="App\Directives\datelessthan.js" />
+    <Content Include="App\PromisesTrial\promisestrial.html" />
+    <Content Include="App\PromisesTrial\promisestrial.js" />
     <Content Include="App\TourSummaryReport\report-factory.js" />
     <Content Include="App\TourSummaryReport\toursummaryfilter.html" />
     <Content Include="App\TourSummaryReport\toursummaryfilter.js" />

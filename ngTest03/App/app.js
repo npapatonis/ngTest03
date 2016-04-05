@@ -40,6 +40,10 @@
             .state('tourSummaryReport', {
                 url: '/toursummaryreport',
                 templateUrl: 'App/TourSummaryReport/toursummaryreport.html'
+            })
+            .state('promisesTrial', {
+                url: '/promisesTrial',
+                templateUrl: 'App/PromisesTrial/promisestrial.html'
             });
 
         var filter = new TourSummaryFilter(new Date(), new Date(), true, false);
