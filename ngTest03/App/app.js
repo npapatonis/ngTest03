@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('ui.bootstrap.demo', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ngMessages', 'ui.bootstrap.datetimepicker'])
+    angular.module('ui.bootstrap.demo', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ngMessages', 'ui.bootstrap.datetimepicker', 'mgcrea.ngStrap.tooltip'])
         .config(config);
 
     function config($stateProvider, $urlRouterProvider) {
@@ -20,6 +20,10 @@
             .state('datePicker', {
                 url: '/datepicker',
                 templateUrl: 'App/DatePicker/datepicker.html'
+            })
+            .state('timePicker', {
+                url: '/timepicker',
+                templateUrl: 'App/TimePicker/timepicker.html'
             })
             .state('dateTimePicker', {
                 url: '/datetimepicker',
