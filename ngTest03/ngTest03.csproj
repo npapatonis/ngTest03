@@ -88,6 +88,10 @@
     <Content Include="Content\styles.css" />
     <Content Include="Content\tks-bootstrap.css" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\angular-strap.js" />
+    <Content Include="Scripts\angular-strap.min.js" />
+    <Content Include="Scripts\angular-strap.tpl.js" />
+    <Content Include="Scripts\angular-strap.tpl.min.js" />
     <Content Include="Scripts\datetime-picker.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
@@ -103,6 +107,7 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\angular-strap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
