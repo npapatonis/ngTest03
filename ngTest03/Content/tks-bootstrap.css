@@ -11,15 +11,15 @@
     color: white;
 }
 
-    .tks-datepicker th button:hover {
-        color: white;
-        background-color: #00549F;
-    }
+.tks-datepicker th button:hover {
+    color: white;
+    background-color: #00549F;
+}
 
-    .tks-datepicker th button:disabled:hover {
-        color: white;
-        background-color: #4A90E2;
-    }
+.tks-datepicker th button:disabled:hover {
+    color: white;
+    background-color: #4A90E2;
+}
 
 /*All calendar dates*/
 .tks-datepicker td button {
@@ -70,7 +70,7 @@
 
 @media print {
     .no-print {
-       display: none;
+        display: none;
     }
 }
 
@@ -80,3 +80,21 @@
     brand blue dark pressed - #003399
     brand yellow - #FECC5C
 */
+
+/*Timepicker arrows*/
+.tks-timepicker th button {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    color: #4A90E2;
+}
+
+/*All timepicker times*/
+.tks-timepicker td button {
+    border: 0;
+}
+
