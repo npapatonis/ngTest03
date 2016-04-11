@@ -23,12 +23,39 @@
         <hr>
         <!-- Datetime example -->
         <div class="form-group">
-            <label class="control-label"><i class="fa fa-calendar"></i> Datetime picker</label><br>
-            <div class="form-group tks-datepicker">
-                <input type="text" size="10" class="form-control" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker>
+            <div class="col-6">
+                <label for="fromDate">From Date</label>
+                <div class="input-group tks-datepicker">
+                    <input type="text"
+                           name="fromDate"
+                           class="form-control"
+                           ng-model="sharedDate"
+                           data-autoclose="1"
+                           data-container="body"
+                           placeholder="Date"
+                           bs-datepicker>
+                    <!--data-trigger="click"-->
+                    <!--bs-show="fromDatePopup.isOpen"-->
+                    <!--<span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="fromDatePopup.Open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>-->
+                </div>
             </div>
-            <div class="form-group tks-timepicker">
-                <input type="text" size="8" class="form-control" ng-model="sharedDate" data-time-format="h:mm:ss a" data-autoclose="1" placeholder="Time" bs-timepicker>
+            <div class="col-1">&nbsp;</div>
+            <div class="col-4">
+                <label for="fromTime">Time</label>
+                <div class="input-group tks-timepicker">
+                    <input type="text"
+                           name="fromTime"
+                           size="8"
+                           class="form-control"
+                           ng-model="sharedDate"
+                           data-time-format="HH:mm"
+                           data-minute-step="1"
+                           data-autoclose="1"
+                           placeholder="Time"
+                           bs-timepicker>
+                </div>
             </div>
         </div>
     </form>
