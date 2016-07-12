@@ -48,6 +48,10 @@
             .state('promisesTrial', {
                 url: '/promisesTrial',
                 templateUrl: 'App/PromisesTrial/promisestrial.html'
+            })
+            .state('postalCodePatterns', {
+                url: '/postalCodePatterns',
+                templateUrl: 'App/PostalCodePatterns/postalCodePatterns.html'
             });
 
         var filter = new TourSummaryFilter(new Date(), new Date(), true, false);

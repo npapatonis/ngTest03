@@ -1,0 +1,9 @@
+﻿<div ng-controller="PostalCodePatternsCtrl">
+    <form name="postalCodePattersn" novalidate>
+        <div class="form-group col-md-4">
+            <select class="form-control" ng-model="postalCode" ng-options="postalCode.country for postalCode in postalCodes" />
+
+            <pre>Selected: {{ postalCode : json }}</pre>
+        </div>
+    </form>
+</div>
