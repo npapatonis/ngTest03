@@ -2,10 +2,10 @@
     <form name="postalCodePattersn" novalidate>
         <div class="form-group row">
             <div class="col-md-3">
-                <select class="form-control" ng-model="postalCode" ng-options="postalCode.country for postalCode in postalCodes" />
+                <select class="form-control" ng-model="formData.selectedPostalCode" ng-options="pc.country for pc in postalCodes"></select>
             </div>
         </div>
     </form>
     <br />
-    <pre>Selected: {{ formData.selectedPostalCode : json }}</pre>
+    <pre>Selected: {{ formData.selectedPostalCode | json }}</pre>
 </div>
