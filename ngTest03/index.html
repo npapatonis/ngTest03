@@ -4,8 +4,8 @@
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/tks-bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/ui-bootstrap-csp.css" rel="stylesheet" type="text/css" />
-    <link href="Content/styles.css" rel="stylesheet" title="di" type="text/css" />
-    <link href="Content/styles-extended.css" rel="stylesheet" title="di" type="text/css" />
+    <!--<link href="Content/styles.css" rel="stylesheet" title="di" type="text/css" />
+    <link href="Content/styles-extended.css" rel="stylesheet" title="di" type="text/css" />-->
 
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-ui-router.js"></script>
@@ -16,11 +16,14 @@
     <script src="Scripts/angular-strap.js"></script>
     <script src="Scripts/angular-strap.tpl.js"></script>
     <script src="App/app.js"></script>
+    <script src="App/Common/address-factory.js"></script>
     <script src="App/Common/common.js"></script>
     <script src="App/Common/report-filter.js"></script>
     <script src="App/Common/date-factory.js"></script>
+    <script src="App/Common/resourcestrings.js"></script>
     <script src="App/Directives/dategreaterthan.js"></script>
     <script src="App/Directives/datelessthan.js"></script>
+    <script src="App/Directives/tksAddressEntry.js"></script>
     <script src="App//Buttons/buttons.js"></script>
     <script src="App/DatePicker/datepicker.js"></script>
     <script src="App/TimePicker/timepicker.js"></script>
@@ -32,6 +35,7 @@
     <script src="App/TourSummaryReport/toursummaryreport.js"></script>
     <script src="App/PromisesTrial/promisestrial.js"></script>
     <script src="App/PostalCodePatterns/postalCodePatterns.js"></script>
+    <script src="App/AddressEntry/addressEntry.js"></script>
 
     <style>
         .navbar {
@@ -68,6 +72,14 @@
                 <ul class="dropdown-menu">
                     <li><a ui-sref="promisesTrial">Promises</a></li>
                     <li><a ui-sref="postalCodePatterns">Postal Code Patterns</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" uib-dropdown>
+                <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+                    Custom Directives<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="addressEntry">Address Entry</a></li>
                 </ul>
             </li>
             <li class="dropdown" uib-dropdown>

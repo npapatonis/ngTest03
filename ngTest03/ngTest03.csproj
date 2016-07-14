@@ -66,19 +66,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\AddressEntry\addressEntry.html" />
+    <Content Include="App\AddressEntry\addressEntry.js" />
+    <Content Include="App\Common\address-factory.js" />
     <Content Include="App\Common\common.js" />
     <Content Include="App\Common\date-factory.js" />
     <Content Include="App\Common\report-filter.js" />
+    <Content Include="App\Common\resourcestrings.js" />
     <Content Include="App\DateRange\daterange.html" />
     <Content Include="App\DateRange\daterange.js" />
     <Content Include="App\DateTimePicker\datetimepicker.html" />
     <Content Include="App\DateTimePicker\DateTimePicker.js" />
+    <Content Include="App\Directives\tksAddressEntry.js" />
     <Content Include="App\Directives\dategreaterthan.js" />
     <Content Include="App\Directives\datelessthan.js" />
     <Content Include="App\PostalCodePatterns\postalCodePatterns.html" />
     <Content Include="App\PostalCodePatterns\postalCodePatterns.js" />
     <Content Include="App\PromisesTrial\promisestrial.html" />
     <Content Include="App\PromisesTrial\promisestrial.js" />
+    <Content Include="App\Templates\tksAddressEntry.tpl.html" />
     <Content Include="App\TimePicker\timepicker.html" />
     <Content Include="App\TimePicker\timepicker.js" />
     <Content Include="App\TourSummaryReport\report-factory.js" />

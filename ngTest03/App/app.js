@@ -1,8 +1,11 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('ui.bootstrap.demo', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ngMessages', 'ui.bootstrap.datetimepicker', 'mgcrea.ngStrap'])
-        .config(config);
+    angular.module('g1mApp', []);
+
+    angular.module('ui.bootstrap.demo', ['g1mApp', 'ui.router', 'ngAnimate', 'ui.bootstrap', 'ngMessages', 'ui.bootstrap.datetimepicker', 'mgcrea.ngStrap'])
+        .config(config)
+        .run(run);
 
     function config($stateProvider, $urlRouterProvider) {
 
@@ -52,9 +55,18 @@
             .state('postalCodePatterns', {
                 url: '/postalCodePatterns',
                 templateUrl: 'App/PostalCodePatterns/postalCodePatterns.html'
+            })
+            .state('addressEntry', {
+                url: '/addressEntry',
+                templateUrl: 'App/AddressEntry/addressEntry.html'
             });
 
         var filter = new TourSummaryFilter(new Date(), new Date(), true, false);
     };
+
+    run.$inject = ['$rootScope', 'STATICUITEXT'];
+    function run($rootScope, STATICUITEXT) {
+        $rootScope.STATICUITEXT = STATICUITEXT;
+    }
 
 })();
