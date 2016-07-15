@@ -19,7 +19,6 @@
 
         function controller($scope, addressFactory) {
 
-            $scope.state = null;
             $scope.country = null;
 
             $scope.useStateSelector = false;
@@ -29,13 +28,13 @@
             function init() {
                 $scope.usStates = addressFactory.getUsStates();
                 $scope.countries = addressFactory.getCountries();
+                $scope.country = $scope.countries[0];
+
+                //$scope.address.country = $scope.country.name;
+                //$scope.useStateSelector = ($scope.country.isoCode === 'US');
             }
 
-            $scope.$watch('state', function (oldValue, newValue) {
-                $scope.address.state = $scope.state.name;
-            });
-
-            $scope.$watch('country', function (oldValue, newValue) {
+            $scope.countryChange = function () {
                 if ($scope.country) {
                     $scope.address.country = $scope.country.name;
                     $scope.useStateSelector = ($scope.country.isoCode === 'US');
@@ -44,7 +43,10 @@
                     $scope.address.country = '';
                     $scope.useStateSelector = false;
                 }
-            });
+                $scope.address.state = '';
+
+                $scope.change();
+            }
         }
 
         return directive;
