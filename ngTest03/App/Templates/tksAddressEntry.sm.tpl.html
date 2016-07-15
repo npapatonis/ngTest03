@@ -1,0 +1,89 @@
+﻿<!-- Address line one -->
+<div class="form-group row">
+    <label for="tks_ae_address_1" class="form-control-label col-md-3">{{$root.STATICUITEXT.ADDRESS1}}</label>
+    <div class="col-md-5">
+        <input id="tks_ae_address_1"
+               name="tks_ae_address_1"
+               type="text"
+               class="form-control"
+               data-ng-model="address.address1"
+               data-ng-change="change()">
+    </div>
+</div>
+
+<!-- Address line two -->
+<div class="form-group row">
+    <label for="tks_ae_address_2" class="form-control-label col-md-3">{{$root.STATICUITEXT.ADDRESS2}}</label>
+    <div class="col-md-5">
+        <input id="tks_ae_address_2"
+               name="tks_ae_address_2"
+               type="text"
+               class="form-control"
+               data-ng-model="address.address2"
+               data-ng-change="change()">
+    </div>
+</div>
+
+<!-- City -->
+<div class="form-group row">
+    <label for="tks_ae_city" class="form-control-label col-md-3">{{$root.STATICUITEXT.CITY}}</label>
+    <div class="col-md-5">
+        <input id="tks_ae_city"
+               name="tks_ae_city"
+               type="text"
+               class="form-control"
+               data-ng-model="address.city"
+               data-ng-change="change()">
+    </div>
+</div>
+
+<!-- State -->
+<div class="form-group row">
+    <label for="tks_ae_state" class="form-control-label col-md-3">{{$root.STATICUITEXT.STATE}}</label>
+    <div class="col-md-5" data-ng-if="useStateSelector">
+        <select id="tks_ae_state_select"
+                name="tks_ae_state_select"
+                class="form-control"
+                data-ng-model="address.state"
+                data-ng-change="change()"
+                data-ng-options="state.id as state.name for state in usStates">
+            <option value="">{{$root.STATICUITEXT.STATESELECT}}</option>
+        </select>
+    </div>
+    <div class="col-md-5" data-ng-if="!useStateSelector">
+        <input id="tks_ae_state_text"
+               name="tks_ae_state_text"
+               type="text"
+               class="form-control"
+               data-ng-model="address.state"
+               data-ng-change="change()">
+    </div>
+</div>
+
+<!-- Zip -->
+<div class="form-group row">
+    <label for="tks_ae_zip" class="form-control-label col-md-3">{{$root.STATICUITEXT.ZIPCODE}}</label>
+    <div class="col-md-5">
+        <input id="tks_ae_zip"
+               name="tks_ae_zip"
+               type="text"
+               class="form-control"
+               data-ng-model="address.zipcode"
+               data-ng-change="change()">
+    </div>
+</div>
+
+<!-- Country -->
+<div class="form-group row">
+    <label for="tks_ae_country" class="form-control-label col-md-3">{{$root.STATICUITEXT.COUNTRY}}</label>
+    <div class="col-md-5">
+        <select id="tks_ae_country"
+                name="tks_ae_country"
+                class="form-control"
+                data-ng-model="country"
+                data-ng-change="countryChange()"
+                data-ng-options="country.name for country in countries">
+        </select>
+    </div>
+</div>
+

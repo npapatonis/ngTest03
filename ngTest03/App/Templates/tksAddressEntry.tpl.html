@@ -41,24 +41,16 @@
 
 <!-- State -->
 <div class="form-group row">
-    <label for="tks_ae_state" class="form-control-label col-md-4">{{$root.STATICUITEXT.STATE}}*</label>
+    <label for="tks_ae_state" class="form-control-label col-md-4">{{$root.STATICUITEXT.STATE}}</label>
     <div class="col-md-8" data-ng-if="useStateSelector">
         <select id="tks_ae_state_select"
                 name="tks_ae_state_select"
                 class="form-control"
                 data-ng-model="address.state"
-                data-ng-change="change()">
-            <option value="">{{$root.STATICUITEXT.STATESELECT}}</option>
-            <option data-ng-repeat="state in usStates" value="{{state.name}}">{{state.name}}</option>
-        </select>
-        <!--<select id="tks_ae_state_select"
-                name="tks_ae_state_select"
-                class="form-control"
-                data-ng-model="state"
                 data-ng-change="change()"
-                data-ng-options="state.name for state in usStates">
+                data-ng-options="state.id as state.name for state in usStates">
             <option value="">{{$root.STATICUITEXT.STATESELECT}}</option>
-        </select>-->
+        </select>
     </div>
     <div class="col-md-8" data-ng-if="!useStateSelector">
         <input id="tks_ae_state_text"
@@ -66,8 +58,7 @@
                type="text"
                class="form-control"
                data-ng-model="address.state"
-               data-ng-change="change()"
-               required>
+               data-ng-change="change()">
     </div>
 </div>
 
@@ -95,18 +86,19 @@
                 data-ng-model="country"
                 data-ng-change="countryChange()"
                 data-ng-options="country.name for country in countries">
-            <option value="">{{$root.STATICUITEXT.COUNTRYSELECT}}</option>
         </select>
-
-        <!--<select id="tks_ae_country"
-                name="tks_ae_country"
-                class="form-control"
-                data-ng-model="address.country"
-                data-ng-change="change()"
-                required>
-            <option value="">{{$root.STATICUITEXT.COUNTRYSELECT}}</option>
-            <option data-ng-repeat="country in countries" value="{{country.name}}">{{country.name}}</option>
-        </select>-->
     </div>
 </div>
 
+<!-- Phone -->
+<div class="form-group row">
+    <label for="tks_ae_phone" class="form-control-label col-md-4">{{$root.STATICUITEXT.PHONE}}</label>
+    <div class="col-md-8">
+        <input id="tks_ae_phone"
+               name="tks_ae_phone"
+               type="text"
+               class="form-control"
+               data-ng-model="address.phone"
+               data-ng-change="change()">
+    </div>
+</div>
