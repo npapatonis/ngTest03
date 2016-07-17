@@ -27,20 +27,18 @@
             $scope.countryChange = function () {
                 $scope.address.country = $scope.country.name;
                 $scope.useStateSelector = ($scope.country.isoCode === 'US');
-                $scope.address.state = '';
+                if ($scope.useStateSelector && $scope.address.state) {
+                    var findStateResult = $scope.usStates.filter(function (state) {
+                        return state.id === $scope.address.state;
+                    });
+                    if (findStateResult.length === 0) {
+                        $scope.address.state = '';
+                    }
+                }
+                else {
+                    $scope.address.state = '';
+                }
                 $scope.change();
-
-                //if ($scope.country) {
-                //    $scope.address.country = $scope.country.name;
-                //    $scope.useStateSelector = ($scope.country.isoCode === 'US');
-                //}
-                //else {
-                //    $scope.address.country = '';
-                //    $scope.useStateSelector = false;
-                //}
-                //$scope.address.state = '';
-
-                //$scope.change();
             }
 
             init();
@@ -51,7 +49,10 @@
 
                 $scope.useStateSelector = false;
 
-                $scope.country = $scope.countries[0];
+                $scope.country = $scope.countries.filter(
+                    function (country) {
+                        return country.isoCode === 'US';
+                })[0];
                 $scope.countryChange();
             }
         }

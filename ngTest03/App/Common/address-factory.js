@@ -86,7 +86,13 @@
 
         function getCountries() {
             var countries = [
+                { isoCode: 'FR', name: 'France' },
+                { isoCode: 'GB', name: 'Great Britain' },
+                { isoCode: 'DE', name: 'Germany' },
+                { isoCode: 'JA', name: 'Japan' },
+                { isoCode: 'IT', name: 'Italy' },
                 { isoCode: 'US', name: 'United States of America' },
+                { isoCode: 'ES', name: 'Spain' },
                 { isoCode: 'MX', name: 'Mexico' }
             ];
             return countries;
