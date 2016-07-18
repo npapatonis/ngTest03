@@ -3,15 +3,18 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>Bill To Address</h2>
-                <tks-address-entry address="formData.billAddress"></tks-address-entry>
+                <tks-address-entry id="billto" address="formData.billAddress"></tks-address-entry>
             </div>
             <div class="col-md-6">
                 <h2>Ship To Address</h2>
-                <tks-address-entry address="formData.shipAddress" template-url="/app/Templates/tksAddressEntry.sm.tpl.html"></tks-address-entry>
+                <tks-address-entry id="shipto" address="formData.shipAddress" template-url="/app/Templates/tksAddressEntry.sm.tpl.html"></tks-address-entry>
             </div>
         </div>
     </form>
     <br />
+    <!--<pre>form.billto_state.$error = {{form.billto_state.$error | json}}</pre>
+    <pre>form.shipto_state.$error = {{form.shipto_state.$error | json}}</pre>-->
+    <pre>form.billto_postal_code.$error = {{form.billto_postal_code.$error | json}}</pre>
     <pre>billAddress: {{ formData.billAddress | json }}</pre>
     <pre>shipAddress: {{ formData.shipAddress | json }}</pre>
 </div>

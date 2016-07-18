@@ -1,9 +1,9 @@
 ﻿<!-- Address line one -->
 <div class="form-group row">
-    <label for="tks_ae_address_1" class="form-control-label col-md-4">{{$root.STATICUITEXT.ADDRESS1}}*</label>
+    <label for="{{id}}_address_1" class="form-control-label col-md-4">{{$root.STATICUITEXT.ADDRESS1}}*</label>
     <div class="col-md-8">
-        <input id="tks_ae_address_1"
-               name="tks_ae_address_1"
+        <input id="{{id}}_address_1"
+               name="{{id}}_address_1"
                type="text"
                class="form-control"
                data-ng-model="address.address1"
@@ -14,10 +14,10 @@
 
 <!-- Address line two -->
 <div class="form-group row">
-    <label for="tks_ae_address_2" class="form-control-label col-md-4">{{$root.STATICUITEXT.ADDRESS2}}</label>
+    <label for="{{id}}_address_2" class="form-control-label col-md-4">{{$root.STATICUITEXT.ADDRESS2}}</label>
     <div class="col-md-8">
-        <input id="tks_ae_address_2"
-               name="tks_ae_address_2"
+        <input id="{{id}}_address_2"
+               name="{{id}}_address_2"
                type="text"
                class="form-control"
                data-ng-model="address.address2"
@@ -27,10 +27,10 @@
 
 <!-- City -->
 <div class="form-group row">
-    <label for="tks_ae_city" class="form-control-label col-md-4">{{$root.STATICUITEXT.CITY}}*</label>
+    <label for="{{id}}_city" class="form-control-label col-md-4">{{$root.STATICUITEXT.CITY}}*</label>
     <div class="col-md-8">
-        <input id="tks_ae_city"
-               name="tks_ae_city"
+        <input id="{{id}}_city"
+               name="{{id}}_city"
                type="text"
                class="form-control"
                data-ng-model="address.city"
@@ -41,20 +41,21 @@
 
 <!-- State -->
 <div class="form-group row">
-    <label for="tks_ae_state" class="form-control-label col-md-4">{{$root.STATICUITEXT.STATE}}</label>
-    <div class="col-md-8" data-ng-if="useStateSelector">
-        <select id="tks_ae_state_select"
-                name="tks_ae_state_select"
+    <label for="{{id}}_state" class="form-control-label col-md-4">{{$root.STATICUITEXT.STATE}}</label>
+    <div class="col-md-8" data-ng-if="isUnitedStates">
+        <select id="{{id}}_state"
+                name="{{id}}_state"
                 class="form-control"
                 data-ng-model="address.state"
                 data-ng-change="change()"
-                data-ng-options="state.id as state.name for state in usStates">
+                data-ng-options="state.id as state.name for state in usStates"
+                required>
             <option value="">{{$root.STATICUITEXT.STATESELECT}}</option>
         </select>
     </div>
-    <div class="col-md-8" data-ng-if="!useStateSelector">
-        <input id="tks_ae_state_text"
-               name="tks_ae_state_text"
+    <div class="col-md-8" data-ng-if="!isUnitedStates">
+        <input id="{{id}}_state"
+               name="{{id}}_state"
                type="text"
                class="form-control"
                data-ng-model="address.state"
@@ -62,15 +63,16 @@
     </div>
 </div>
 
-<!-- Zip -->
+<!-- Postal code -->
 <div class="form-group row">
-    <label for="tks_ae_zip" class="form-control-label col-md-4">{{$root.STATICUITEXT.ZIPCODE}}*</label>
+    <label for="{{id}}_postal_code" class="form-control-label col-md-4">{{$root.STATICUITEXT.ZIPCODE}}*</label>
     <div class="col-md-8">
-        <input id="tks_ae_zip"
-               name="tks_ae_zip"
+        <input id="{{id}}_postal_code"
+               name="{{id}}_postal_code"
                type="text"
                class="form-control"
                data-ng-model="address.zipcode"
+               data-ng-pattern="postalCodePattern"
                data-ng-change="change()"
                required>
     </div>
@@ -78,10 +80,10 @@
 
 <!-- Country -->
 <div class="form-group row">
-    <label for="tks_ae_country" class="form-control-label col-md-4">{{$root.STATICUITEXT.COUNTRY}}*</label>
+    <label for="{{id}}_country" class="form-control-label col-md-4">{{$root.STATICUITEXT.COUNTRY}}*</label>
     <div class="col-md-8">
-        <select id="tks_ae_country"
-                name="tks_ae_country"
+        <select id="{{id}}_country"
+                name="{{id}}_country"
                 class="form-control"
                 data-ng-model="country"
                 data-ng-change="countryChange()"
@@ -92,10 +94,10 @@
 
 <!-- Phone -->
 <div class="form-group row">
-    <label for="tks_ae_phone" class="form-control-label col-md-4">{{$root.STATICUITEXT.PHONE}}</label>
+    <label for="{{id}}_phone" class="form-control-label col-md-4">{{$root.STATICUITEXT.PHONE}}</label>
     <div class="col-md-8">
-        <input id="tks_ae_phone"
-               name="tks_ae_phone"
+        <input id="{{id}}_phone"
+               name="{{id}}_phone"
                type="text"
                class="form-control"
                data-ng-model="address.phone"
